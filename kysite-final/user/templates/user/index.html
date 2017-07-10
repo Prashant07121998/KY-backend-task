@@ -1,0 +1,10 @@
+
+<h1>Hey guys sup</h1>
+<ul>
+    <li><a href="/accounts/signup/">Registrations required for new users</a></li>
+    {% if user.is_authenticated %}
+    <li><a href="{% url 'user1:dash_board' %}">Login</a></li>
+    {% else %}
+    <li><a href='/accounts/login/'>Login</a></li>
+    {% endif %}
+</ul>
